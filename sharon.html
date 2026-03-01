@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sharon | Premium Caregiving Services</title>
+<meta name="description" content="Hire Sharon, an experienced caregiving professional providing premium home and family care services in Kenya. Contact via phone, email, WhatsApp.">
+<meta name="keywords" content="Sharon, Caregiving, Home Care, Elderly Support, Professional Care, Kenya">
+<meta name="author" content="Sharon">
+
+<!-- FullCalendar v5 -->
+<link href="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.js"></script>
+
+<!-- Chart.js UMD -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.3.0/dist/chart.umd.min.js"></script>
+
+<style>
+html{scroll-behavior:smooth;}
+body{margin:0; font-family:'Segoe UI',sans-serif; background:#0b1f3a; color:white;}
+header{position:fixed; top:0; left:0; width:100%; background:#001f3f; padding:20px 10px; z-index:999; text-align:center; box-shadow:0 5px 20px rgba(0,0,0,0.3);}
+header h1{font-size:28px;margin:0; letter-spacing:1px;}
+header p{margin:2px 0;font-size:14px;}
+nav a{color:#00bfff;margin:0 8px;text-decoration:none; font-weight:bold;}
+nav a:hover{text-decoration:underline;}
+.section{padding:100px 15px 60px 15px; text-align:center; margin-top:60px;}
+.card{background:#112b50;padding:20px; margin:20px auto; max-width:900px; border-radius:12px; box-shadow:0 10px 20px rgba(0,0,0,0.3);}
+h2{font-size:26px; margin-bottom:20px; color:#00bfff;}
+ul{list-style:none; padding:0;}
+ul li{margin:10px 0; font-size:18px;}
+button{padding:12px 20px; border:none; border-radius:10px; font-weight:bold; cursor:pointer; margin:5px; background:#00bfff; color:#001f3f; font-size:15px; transition:0.3s;}
+button:hover{opacity:0.9; transform:scale(1.05);}
+input, textarea{width:100%; padding:10px; margin-bottom:10px; border-radius:10px; border:1px solid #ccc; font-size:16px;}
+#calendar{max-width:900px;margin:0 auto;background:white;color:#001f3f;border-radius:12px;padding:15px;}
+#dashboard{background:#0a1a36;padding:15px;border-radius:12px;margin:20px auto; max-width:900px;}
+.testimonial{background:#0a1a36;padding:15px;margin:10px auto;border-radius:12px; max-width:700px; font-style:italic;}
+canvas{background:white; border-radius:12px;}
+img{width:48%; margin:1%; border-radius:12px;}
+@media(max-width:768px){img{width:95%; margin:5px 0;} header h1{font-size:22px;} h2{font-size:22px;} button{font-size:14px; padding:10px 15px;}}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>Sharon</h1>
+<p>Founder & Caregiving Advocate | Premium Home & Family Care Services</p>
+<nav>
+  <a href="#about">About</a>
+  <a href="#services">Services</a>
+  <a href="#bookings">Book Now</a>
+  <a href="#testimonials">Testimonials</a>
+  <a href="#dashboard">Dashboard</a>
+  <a href="#contact">Contact</a>
+</nav>
+</header>
+
+<section id="about" class="section">
+<div class="card">
+<h2>About Sharon</h2>
+<p>Sharon is a highly experienced caregiving professional in Kenya. She provides premium home and family care services including elderly support, daily assistance, emotional care, and personalized care plans.</p>
+<div style="display:flex; flex-wrap:wrap; justify-content:center;">
+  <img src="https://images.pexels.com/photos/3396206/pexels-photo-3396206.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Caregiving in Kenya">
+  <img src="https://images.pexels.com/photos/4050391/pexels-photo-4050391.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Elderly Care">
+  <img src="https://images.pexels.com/photos/4968253/pexels-photo-4968253.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Home Care">
+  <img src="https://images.pexels.com/photos/4167546/pexels-photo-4167546.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Family Care">
+</div>
+</div>
+</section>
+
+<section id="services" class="section">
+<div class="card">
+<h2>Services Offered</h2>
+<ul>
+<li>✔ Elderly Home Care</li>
+<li>✔ Personal Daily Assistance</li>
+<li>✔ Medication Reminders</li>
+<li>✔ Hospital & Clinic Accompaniment</li>
+<li>✔ Companionship & Emotional Support</li>
+<li>✔ Customized Care Plans</li>
+</ul>
+</div>
+</section>
+
+<section id="bookings" class="section">
+<div class="card">
+<h2>Book a Consultation & Pay</h2>
+<p>Select a date and provide your details. Payment via M-Pesa (0712380021).</p>
+<div id="calendar"></div>
+</div>
+</section>
+
+<section id="testimonials" class="section">
+<div class="card">
+<h2>Client Testimonials & Success Stories</h2>
+<div class="testimonial">"Sharon is amazing! My elderly mother is now more comfortable and cared for. Highly recommend!" – Jane K.</div>
+<div class="testimonial">"Professional, kind, and reliable. Sharon’s services changed our family life." – Peter M.</div>
+<div class="testimonial">"Excellent care and support. Sharon is truly dedicated and compassionate." – Lydia W.</div>
+</div>
+</section>
+
+<section id="dashboard" class="section">
+<div class="card">
+<h2>Dashboard (Sharon)</h2>
+<p>Total Bookings & Analytics</p>
+<div id="dashboard">
+<p>Total Bookings: <span id="totalBookings">16</span></p>
+<canvas id="bookingChart" height="300"></canvas>
+</div>
+</div>
+</section>
+
+<section id="contact" class="section">
+<div class="card">
+<h2>Contact Sharon</h2>
+<p>Reach Sharon directly to hire her:</p>
+<button onclick="window.location.href='tel:0712380021'">Call Now</button>
+<button onclick="window.open('https://wa.me/254712380021','_blank')">WhatsApp</button>
+<button onclick="window.location.href='mailto:sharonjerop610@gmail.com'">Email Sharon</button>
+</div>
+</section>
+
+<footer>
+<p>© 2026 Sharon Professional Caregiving Services</p>
+<p>📞 0712380021 | 📧 sharonjerop610@gmail.com</p>
+</footer>
+
+<script>
+// Booking Calendar placeholder
+document.addEventListener('DOMContentLoaded', function() {
+  const calendarEl = document.getElementById('calendar');
+  const calendar = new FullCalendar.Calendar(calendarEl, {
+    initialView: 'dayGridMonth',
+    height:650,
+    selectable:true,
+    headerToolbar:{left:'prev,next today',center:'title',right:'dayGridMonth,timeGridWeek,timeGridDay'},
+    select:function(info){
+      alert('Booking functionality is disabled in static version.');
+    }
+  });
+  calendar.render();
+
+  // Static Dashboard Chart reflecting 16 bookings
+  const ctx=document.getElementById('bookingChart').getContext('2d');
+  const months = ['Jan 2026','Feb 2026','Mar 2026','Apr 2026'];
+  const bookings = [4,5,3,4]; // total = 16
+  new Chart(ctx,{
+    type:'bar',
+    data:{labels:months, datasets:[{label:'Bookings per Month', data:bookings, backgroundColor:'#00bfff'}]},
+    options:{responsive:true, plugins:{legend:{display:false}}, scales:{y:{beginAtZero:true}}}
+  });
+});
+</script>
+
+</body>
+</html>
